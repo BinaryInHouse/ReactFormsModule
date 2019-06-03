@@ -1,0 +1,7 @@
+<div class="row justify-content-center">
+  <div class="card col-6">
+    <button (click)="nuevaReceta()" class="btn btn-success btn-block">Nuevo</button>
+    <app-receta *ngFor="let receta of data; let indice=index" [receta]="receta" [indice]="indice"
+      (onFinalizar)="finalizar($event)"></app-receta>
+  </div>
+</div>

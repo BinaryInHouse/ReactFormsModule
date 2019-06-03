@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <a class="navbar-brand" routerLink="/">Sistema</a>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/">Login<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/receta">Listado</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/receta/agregar">Agregar</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="button">Logout</button>
+    </form>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<!-- <app-login *ngIf="mostrar==1" (onLogin)="mostrar=2"></app-login>
+<app-listado *ngIf="mostrar==2" (onCambiarVista)="mostrar=$event"></app-listado>
+<app-nuevo *ngIf="mostrar==3" (onFinalizar)="mostrar=2"></app-nuevo>
+<app-modificar *ngIf="mostrar==4" (onFinalizar)="mostrar=2"></app-modificar> -->
