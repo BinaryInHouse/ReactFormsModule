@@ -12,7 +12,7 @@
             <span *ngIf="grupo.get('contrasena').hasError('minlength') && grupo.get('contrasena').touched">La longitud mínima es 6</span>
         </div>
         <div>
-            <button type="button" class="btn btn-success" [disabled]="!grupo.valid" (click)="ingresar()">Ingresar</button>
+            <button type="button" class="btn btn-success" [disabled]="!grupo.valid" (click)="login()">Ingresar</button>
             <button class="btn btn-primary" (click)="mostrar=!mostrar">Registrar</button>
         </div>
     </form>
@@ -35,7 +35,7 @@
         </div>
         <div>
             <button type="button" class="btn btn-primary" (click)="mostrar=!mostrar">Login</button>
-            <button type="button" class="btn btn-success" [disabled]="!grupo.valid" (click)="ingresar()">Registrar</button>
+            <button type="button" class="btn btn-success" [disabled]="!grupo.valid" name="registrar" (click)="login()">Registrar</button>
         </div>
     </form>
 </div>

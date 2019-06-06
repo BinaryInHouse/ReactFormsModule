@@ -7,15 +7,16 @@ import { Generico } from './generico';
 })
 export class DataService extends Generico {
 
+  activaMenu: boolean = false;
   onCambioData: EventEmitter<Array<{}>> = new EventEmitter<Array<{}>>()
 
   private data: Array<IReceta> = []
 
   constructor() {
     super([
-      { titulo: "Arroz con pato", descripcion: "plato tradicional norteño" },
-      { titulo: "Picante de cuy", descripcion: "plato típico de la sierra" },
-      { titulo: "Tacacho con cecina", descripcion: "plato típico de la selva" }
+      { titulo: 'Arroz con pato', descripcion: 'plato tradicional norteño' },
+      { titulo: 'Picante de cuy', descripcion: 'plato típico de la sierra' },
+      { titulo: 'Tacacho con cecina', descripcion: 'plato típico de la selva' }
     ])
   }
 

@@ -9,18 +9,20 @@ import { NuevoComponent } from './nuevo/nuevo.component';
 import { ModificarComponent } from './modificar/modificar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { AutorizacionGuard } from './autorizacion.guard';
 
 
 const rutas: Routes = [
-  { path: "", component: LoginComponent },
-  {
-    path: "receta", children: [
-      { path: "", component: ListadoComponent },
-      { path: "agregar", component: NuevoComponent },
-      { path: "modificar/:id", component: ModificarComponent }
-    ]
-  },
-  { path: "**", redirectTo: "" }
+
+  { path: '', component: LoginComponent },
+
+  { path: 'listado', component: ListadoComponent, canActivate: [AutorizacionGuard] },
+  { path: 'agregar', component: NuevoComponent, canActivate: [AutorizacionGuard] },
+  { path: 'modificar/:id', component: ModificarComponent },
+
+
+  { path: '**', redirectTo: '' }
+
 ]
 
 @NgModule({
